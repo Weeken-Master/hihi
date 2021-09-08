@@ -173,7 +173,8 @@ class NhanhService
 //         curl_setopt($curl, CURLOPT_CAINFO, './cacert.pem');
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         $curlResult = curl_exec($curl);
-
+        echo $curlResult;
+        echo "đã chạy";
         if (curl_error($curl) == "") {
             $response = json_decode($curlResult);
         } else {
